@@ -1,0 +1,11 @@
+Package: TIDaC
+Type: Package
+Title: TIDaC (TCGA Image Dataset Creator)
+Version: 0.1.1
+Author: Umberto Azadi (u.azadi@campus.unimib.it)
+Maintainer: The package maintainer <u.azadi@campus.unimib.it>
+Description: This package allows to collect images from TCGA (https://cancergenome.nih.gov/) in order to create a dataset labelled based on the mutations occurred
+Imports: httr, readr
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
