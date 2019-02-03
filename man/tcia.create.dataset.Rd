@@ -20,7 +20,9 @@ tcia.create.dataset(api.key, body.parts = "", modality.values = "",
 \item{apy.key}{the unique TCIA Api Key of the user}
 }
 \description{
-Download the TCIA images related to a
+Download the TCIA images that match the query parameter (body.parts, modality.values), if specified,
+it will download all the images otherwise. Furthermore the images will be organized based on the
+<groupby> attributes, if  specified, it will save all the images in the main folder otherwise.
 }
 \examples{
 

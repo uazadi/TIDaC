@@ -132,7 +132,7 @@ tcia.get.Series <- function(api.key, modality.values, body.parts){
 }
 
 
-# Support function that download the images
+# Support function that download the images indicated in the parameter row
 tcia.download.images <- function(api.key, row, dataset.path, groupby, file.name){
   endpt = "https://services.cancerimagingarchive.net/services/v3/TCIA/query/getImage"
   query = paste("SeriesInstanceUID=", row$SeriesInstanceUID, sep = "")
@@ -160,7 +160,9 @@ tcia.download.images <- function(api.key, row, dataset.path, groupby, file.name)
 }
 
 
-#' Download the TCIA images related to a
+#' Download the TCIA images that match the query parameter (body.parts, modality.values), if specified,
+#' it will download all the images otherwise. Furthermore the images will be organized based on the
+#' <groupby> attributes, if  specified, it will save all the images in the main folder otherwise.
 #'
 #' @title tcia.create.dataset
 #'
