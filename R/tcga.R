@@ -1,7 +1,7 @@
 library(httr)
 library(readr)
 
-#' Return the TCGA Gene Ensembl (ex. ENSG00000132694) give the TCGA Gene Symbol (ex. ARHGEF11)
+#' Return the TCGA Gene Ensembl (ex. ENSG00000132694) given the TCGA Gene Symbol (ex. ARHGEF11)
 #'
 #' @title gene.symbol_to_ensembl
 #'
@@ -158,7 +158,7 @@ already.exists <- function(svsfile, path){
   return(NULL)
 }
 
-#' Download and save the TCGA images specified using the UUID of the images.
+#' Download and save the TCGA images specified using the UUID.
 #' Each image will be saved as <Image UUID>.svs
 #'
 #' @title download.images
@@ -216,7 +216,7 @@ create.dataset_path <- function(dataset.path, dir_name){
   return(full_path)
 }
 
-#' Download and save the TCGA images related to a specified mutation type and
+#' Download and save the TCGA images related to one specified mutation type and
 #' mutation consequence type occured on a gene. These image will be saved in a folder
 #' named "<gene_name>_<mutation type>_<mutation consequence type>, which will
 #' be placed in <dataset.path>, if it is specified, or in the current
@@ -272,8 +272,8 @@ download.mutation.images <- function(gene.symbol, mutation.type, mutation.cons_t
 #' @examples
 #' genes =      c("MUC16",            "PIK3CA")
 #' types =      c("Small deletion",   "Small insertion")
-#' cons_types = c("inframe_deletion", "inframe_insertion")
-#' #              |________________|  |_________________|
+#' cons_types = c("inframe_deletion", "") # The cons_types is optional
+#' #              |________________|
 #' #                       |
 #' #                       |-> Gene + Type + Conseguence Type = First Mutation
 #' # The three vectors (or any iterable data structure) have
@@ -281,7 +281,12 @@ download.mutation.images <- function(gene.symbol, mutation.type, mutation.cons_t
 #' #   - the first mutation to be considered is: "Small deletion on MUC16 that cause an inframe_deletion"
 #' #   - the second mutation to be cosidered is: "Small insertion in PIK3Ca that cause an inframe_insertion"
 #' #   - ...
+#' #
 #' create.mutation.dataset(genes, types, cons_types)
+#'
+#' # DEVELOPER HINT: organize the values in a Data Frame in such a way that the first column contains the Gene,
+#' #                 the second column contains type the and the third column contains con_type. Then the fuction
+#' #                 can be called as follows:  create.mutation.dataset(df$genes, df$types, df$cons_types)
 #'
 #' @param gene.list a list of Gene Symbols of TCGA Genes
 #' @param mutation.types a list of TCGA mutation Types

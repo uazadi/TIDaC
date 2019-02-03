@@ -94,10 +94,8 @@ create.paths <- function(dataset.path, dir_name){
 #' @examples
 #' create.multilabeled.dataset(path_from, path_to)
 #'
-#' @param gene.list a list of Gene Symbols of TCGA Genes
-#' @param mutation.types a list of TCGA mutation Types
-#' @param mutation.cons_types a list of TCGA mutation Consequence Type (optional)
-#' @param dataset.path the root folder of the dataset (optional)
+#' @param dataset.path the path of the dataset form which te image has to be copied
+#' @param new.dataset.path the path of the folder in which the multilabeled dataset will be saved
 #' @export create.multilabeled.dataset
 #'
 create.multilabeled.dataset <- function(dataset.path, new.dataset.path){

@@ -5,7 +5,8 @@ Version: 0.1.1
 Author: Umberto Azadi (u.azadi@campus.unimib.it)
 Maintainer: The package maintainer <u.azadi@campus.unimib.it>
 Description: This package allows to collect images from TCGA (https://cancergenome.nih.gov/) in order to create a dataset labelled based on the mutations occurred
-Imports: httr, readr
+Imports: httr, readr, jsonlite
 Encoding: UTF-8
+License: GNU General Public License v3.0
 LazyData: true
 RoxygenNote: 6.1.1
