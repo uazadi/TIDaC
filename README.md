@@ -11,7 +11,7 @@ The tar.gz R package can be downloaded [here](https://github.com/uazadi/TIDaC/re
 
 ### Component and flow diagrams of TIDaC
 The figure below represents the two main components of the TIDaC architecture. For each component the flow diagram is provided, i.e. the sequence of functions call the allows the creation of the datasets.
-So far TIDaC allows to create two types of types of labelled dataset:
+So far TIDaC allows to create two types of labelled dataset:
 * __Using the component that interfaces with TCGA__ it is possible to create a dataset containing [histopathological images](https://en.wikipedia.org/wiki/Histopathology), labelled based on the mutation occurred;
 * __Using the component that interfaces with TCIA__ it is possible to create a dataset containing [medical images](https://en.wikipedia.org/wiki/Medical_imaging) (obtained in a non-invasive way), labelled using several attributes specified through the "groupby" parameter. 
   * Be aware that in order to use the TCIA Component is required to own a __TCIA Api Key__. The instruction on how to obtain access to the TCIA REST API can be found [here](https://wiki.cancerimagingarchive.net/display/Public/TCIA+Programmatic+Interface+%28REST+API%29+Usage+Guide).
