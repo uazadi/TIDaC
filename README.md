@@ -1,6 +1,6 @@
 # TIDaC #
 ## TCGA and TCIA Image Dataset Creator ##
-TIDaC is an R package that allows to build automatically two types of labelled datasets containing digital images, which are retrieved used the REST APIs provided by two sourced: [TCGA](https://cancergenome.nih.gov/) (The Cancer Genome Atlas) and [TCIA](http://www.cancerimagingarchive.net/) (The Cancer Imaging Archive). 
+TIDaC is an R package that allows to build automatically two types of labelled datasets containing digital images, which are retrieved used the REST APIs provided by two sources: [TCGA](https://cancergenome.nih.gov/) (The Cancer Genome Atlas) and [TCIA](http://www.cancerimagingarchive.net/) (The Cancer Imaging Archive). 
 
 The tar.gz R package can be downloaded [here](https://github.com/uazadi/TIDaC/releases).
 
